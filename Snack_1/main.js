@@ -43,25 +43,18 @@ const Bycycles =
             weight: 3,
         }, {
             Name: 'Bike10',
-            weight: 1,
+            weight: 15,
         },
     ]
 
     let minWeight = [100]
-    let count = Bycycles.length
-    console.log(count);
+
     
     for (let i = 0; i < Bycycles.length; i++) {
-        const bike = Bycycles[i].weight;
         if (Bycycles[i].weight < minWeight[0]) {
             minWeight.pop()
             minWeight.push(Bycycles[i].weight)
-            
-        }else if (Bycycles[i].weight > minWeight[0]) {
-            minWeight.pop()
-            minWeight.push(Bycycles[i+1].weight)
-        
-    }
+        }
 }
    console.log(minWeight[0]);
    h_1El.innerText = minWeight[0]
