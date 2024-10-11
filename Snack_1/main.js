@@ -36,29 +36,32 @@ const Bycycles =
         },
         {
             Name: 'Bike8',
-            weight: 4,
+            weight: 6,
         },
         {
             Name: 'Bike9',
             weight: 3,
         }, {
             Name: 'Bike10',
-            weight: 6,
+            weight: 1,
         },
     ]
 
     let minWeight = [100]
-    for (let i = 0; i < Bycycles.length-1; i++) {
+    let count = Bycycles.length
+    console.log(count);
+    
+    for (let i = 0; i < Bycycles.length; i++) {
         const bike = Bycycles[i].weight;
-        if (Bycycles[i].weight < Bycycles[i+1].weight && Bycycles[i].weight < minWeight[0]) {
+        if (Bycycles[i].weight < minWeight[0]) {
             minWeight.pop()
             minWeight.push(Bycycles[i].weight)
             
-        }else if (Bycycles[i].weight > Bycycles[i+1].weight && Bycycles[i].weight < minWeight[0]) {
+        }else if (Bycycles[i].weight > minWeight[0]) {
             minWeight.pop()
             minWeight.push(Bycycles[i+1].weight)
-        }
         
     }
+}
    console.log(minWeight[0]);
    h_1El.innerText = minWeight[0]
