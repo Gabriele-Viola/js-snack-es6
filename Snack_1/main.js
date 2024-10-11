@@ -36,7 +36,7 @@ const Bycycles =
         },
         {
             Name: 'Bike8',
-            weight: 6,
+            weight: 1,
         },
         {
             Name: 'Bike9',
