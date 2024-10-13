@@ -43,8 +43,14 @@ function random(min ,max ) {
 }
 
 
-let nameFouls = []
-for (let i = 0; i < teams.length; i++) {;
-    nameFouls.push(teams[i].Name, teams[i].fouls)
+let nameFouls = [
+    {
+    }
+]
+for (let i = 0; i < teams.length; i++) {
+    nameFouls[i] = [
+        Name = teams[i].Name,
+        fouls = teams[i].fouls
+    ]
 }
 console.log(nameFouls);
