@@ -47,14 +47,13 @@ const Bycycles =
         },
     ]
 
-    let minWeight = [100]
+    let minWeight = Bycycles[i]
 
     
     for (let i = 0; i < Bycycles.length; i++) {
-        if (Bycycles[i].weight < minWeight[0]) {
-            minWeight.pop()
-            minWeight.push(Bycycles[i].weight)
+        if (Bycycles[i].weight < minWeight) {
+            minWeight = Bycycles[i]
         }
 }
-   console.log(minWeight[0]);
-   h_1El.innerText = minWeight[0]
+   console.log(minWeight);
+   h_1El.innerText = minWeight
